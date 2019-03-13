@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://test.service.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="unqualified" targetNamespace="http://test.service.com/"
+	version="1.0">
+	<xs:element name="addition" type="tns:addition" />
+	<xs:element name="additionResponse" type="tns:additionResponse" />
+	<xs:complexType name="myHeaders">
+		<xs:sequence>
+			<xs:element name="promotionalCode" type="xs:string"
+				minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="addition">
+		<xs:sequence>
+			<xs:element name="arg0" type="xs:int" />
+			<xs:element name="arg1" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="additionResponse">
+		<xs:sequence>
+			<xs:element name="return" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
